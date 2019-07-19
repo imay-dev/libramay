@@ -1,0 +1,42 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">All authors</h1>
+
+        <form class="form-inline my-2 my-lg-0" action="/authors" method="GET">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" 
+            name="name" value="<%= searchOptions.name %>">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+        <hr class="my-2">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>View</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% authors.forEach(author => { %>
+                <tr>
+                    <td><%= author.name %></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/authors/new" role="button">Add author</a>
+        </p>
+    </div>
+</div>
+
+
+<script>
+    $('.nav-item.nav-link').removeClass('active');
+    $('#authors-link').addClass('active');
+</script>

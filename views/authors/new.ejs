@@ -1,0 +1,12 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">New Author</h1>
+        
+        <form action="/authors" method="POST">
+            <%- include('_form_fields.ejs') %>
+            
+            <a href="/authors" class="btn btn-warning">Cancel</a>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
